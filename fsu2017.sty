@@ -1,0 +1,152 @@
+\beamertemplatenavigationsymbolsempty % removes navigation bar
+
+% set font
+\usefonttheme[stillsansserifmath]{serif}
+\usepackage{fontspec}
+\setmainfont{RobotoCondensed}[ Path = data/RobotoCondensed/,
+UprightFont= *-Regular,
+BoldFont = *-Bold,
+ItalicFont = *-RegularItalic,
+BoldItalicFont = *-BoldItalic]
+
+\newfontfamily\frametitlefont{pala}[ Path = data/PalatinoLinotype/,
+UprightFont= pala,
+BoldFont = palab,
+ItalicFont = palai,
+BoldItalicFont = palabi
+]
+
+% math font
+%\usepackage{mathptmx}
+%\usepackage{mathpazo}
+%\usepackage{newtxmath}
+%\usepackage[italic]{mathastext}
+%\usepackage{isomath}
+
+% define colors
+\definecolor{fsuLightBlue}{HTML}{3881B2}
+\definecolor{fsuMediumBlue}{HTML}{334F73}
+\definecolor{fsuDarkBlue}{HTML}{012F5D}
+\definecolor{fsuGold}{HTML}{AE9A63}
+\definecolor{fsuSilver}{HTML}{8E98B7}
+\definecolor{fsuLightGold}{HTML}{D7CDB2}
+\definecolor{fsuVeryLightGold}{HTML}{EAE5D8}
+\definecolor{fsuOrange}{HTML}{EB690B}
+\definecolor{fsuGreen}{HTML}{00B050}
+\definecolor{fsuRed}{HTML}{C00000}
+\definecolor{fsuPink}{HTML}{CD0067}
+\definecolor{fsuTheologie}{HTML}{3326FF}
+\definecolor{fsuRechtswissenschaft}{HTML}{B800A3}
+\definecolor{fsuWirtschaftswissenschaft}{HTML}{DA8A00}
+\definecolor{fsuPhilisophie}{HTML}{7300E6}
+\definecolor{fsuSozialwissenschaft}{HTML}{3DA3CC}
+\definecolor{fsuMathematik}{HTML}{00AC8A}
+\definecolor{fsuPhysik}{HTML}{E64D00}
+\definecolor{fsuChemie}{HTML}{49DA00}
+\definecolor{fsuPharmazie}{HTML}{17A100}
+\definecolor{fsuMedizin}{HTML}{D90B2B}
+
+
+% set colors
+\setbeamercolor{title}{fg=fsuDarkBlue}
+\setbeamercolor{author}{fg=fsuDarkBlue}
+\setbeamercolor{date}{fg=fsuDarkBlue}
+\setbeamercolor{institute}{fg=fsuDarkBlue}
+\setbeamercolor{frametitle}{fg=fsuDarkBlue}
+\setbeamercolor{structure}{fg=fsuDarkBlue}
+\setbeamercolor{normal text}{fg=fsuDarkBlue}
+\setbeamercolor{alerted text}{fg=fsuOrange}
+
+\setbeamercolor{footbarcolor}{bg=fsuDarkBlue!80!white}
+\setbeamercolor{headbarcolor}{bg=fsuDarkBlue}
+\setbeamercolor{section in head/foot}{fg=fsuDarkBlue, bg=white}
+\setbeamercolor{footcolor}{fg=fsuDarkBlue, bg=black!5!white}
+
+\setbeamercolor{palette primary}{fg=white,bg=fsuDarkBlue} % changed this
+\setbeamercolor{palette secondary}{fg=white, bg=fsuMediumBlue} % changed this
+\setbeamercolor{palette tertiary}{fg=white, bg=fsuLightBlue} % changed this
+\setbeamercolor{palette quaternary}{fg=white, bg=fsuDarkBlue}
+
+% set title page
+\setbeamerfont{title}{family=\frametitlefont,size={\fontsize{20}{20}},series=\bfseries}
+
+% set table of content
+\setbeamertemplate{section in toc}[square]
+\setbeamertemplate{subsection in toc}[square]
+
+% set frame title
+\setbeamertemplate{frametitle}[default][left,leftskip=0.5cm,rightskip=0cm]
+\addtobeamertemplate{frametitle}{
+	\begin{beamercolorbox}[wd=0.81cm,ht=2.2pt]{headbarcolor} % blue bar over title
+	\end{beamercolorbox}
+	\vspace*{-0.15cm}
+	}
+	{} % free space before text starts
+\setbeamerfont{frametitle}{family=\frametitlefont,size={\fontsize{15}{15}}}
+
+%% headline modified to show section names only
+%\setbeamertemplate{section in head/foot shaded}[default][50]
+%\setbeamertemplate{headline}{
+%  \begin{beamercolorbox}[wd=\paperwidth,ht=2.5ex,dp=1.125ex]{section in head/foot}
+%  \insertsectionnavigationhorizontal{\textwidth}{}{}
+%  \end{beamercolorbox}
+%} 
+
+% set footline
+\setbeamertemplate{footline}{
+	\begin{beamercolorbox}[wd=\textwidth,ht=0.69mm]{footbarcolor}
+		\hfill\includegraphics[height=0.69mm,width=0.5\textwidth]{data/bar.eps}
+	\end{beamercolorbox}
+	\leavevmode % the following boxes are places next to each other
+	\begin{beamercolorbox}[wd=0.25\textwidth,ht=10.65mm]{footcolor}
+		\vbox to 11.34mm{\vfil \hspace*{0.7cm}\includegraphics[height=0.63cm]{data/UniJena_Wortmarke_blue.eps} \vfil}
+	\end{beamercolorbox}
+	\hspace{-1mm} % remove white gap between boxes
+	\begin{beamercolorbox}[wd=0.5\textwidth,ht=10.65mm,center]{footcolor}
+		\vbox to 11.34mm{\vfil
+			\normalbaselines
+			\insertshorttitle\newline 
+			\insertshortauthor
+		\vfil}
+	\end{beamercolorbox}
+	\hspace{-1mm} % remove white gap between boxes
+	\begin{beamercolorbox}[wd=0.25\textwidth,ht=10.65mm,right]{footcolor}
+		\vbox to 11.34mm{\vfil
+			\normalbaselines
+			\insertdate\hspace*{0.7cm}\newline
+			\insertframenumber /\inserttotalframenumber\hspace*{0.7cm}
+		\vfil}
+	\end{beamercolorbox}
+}
+
+% set footmark
+\setbeamercolor{footnote mark}{fg=gray}
+\setbeamercolor{footnote}{fg=gray}
+\renewcommand*{\thefootnote}{[\arabic{footnote}]} % footnote in [...]
+\renewcommand{\footnoterule}{\vspace{1mm}\textcolor{gray}{\hrule width0.5\textwidth}\vspace{1mm}}
+
+% set margins
+\setbeamersize{text margin left=8mm,text margin right=8mm} 
+
+% set itemize
+%\useinnertheme{rounded}
+\setbeamertemplate{itemize item}{\color{fsuGold}\textbullet}
+\setbeamertemplate{itemize subitem}{\color{fsuSilver}\textbullet}
+\setbeamertemplate{itemize subsubitem}{}
+\setbeamerfont{itemize/enumerate body}{}
+\setbeamerfont{itemize/enumerate subbody}{size=\small}
+\setbeamerfont{itemize/enumerate subsubbody}{size=\footnotesize}
+
+% set block
+\setbeamercolor{block title}{fg=fsuDarkBlue,bg=white}
+\setbeamercolor{block body}{fg=fsuDarkBlue,bg=white}
+
+\newenvironment<>{alert2}[1]{% Definiere alertblock
+\setbeamercolor{block title}{fg=white,bg=fsuOrange}
+\setbeamercolor{block body}{fg=fsuDarkBlue,bg=fsuOrange!5!white}
+  \begin{block}#2{#1}}{\end{block}}
+
+\newenvironment<>{Block}[1]{% Definiere blauen Block
+\setbeamercolor{block title}{fg=white,bg=fsuDarkBlue}
+\setbeamercolor{block body}{fg=fsuDarkBlue,bg=black!5!white}
+  \begin{block}#2{#1}}{\end{block}}
